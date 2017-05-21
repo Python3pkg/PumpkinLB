@@ -70,7 +70,7 @@ if __name__ == '__main__':
 
     mappings = pumpkinConfig.getMappings()
     listeners = []
-    for mappingAddr, mapping in mappings.items():
+    for mappingAddr, mapping in list(mappings.items()):
         logmsg('Starting up listener on %s:%d with mappings: %s\n' %(mapping.localAddr, mapping.localPort, str(mapping.workers)))
         listener = PumpkinListener(mapping.localAddr, mapping.localPort, mapping.workers, bufferSize)
         listener.start()

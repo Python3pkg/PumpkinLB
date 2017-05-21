@@ -6,7 +6,7 @@
 import sys
 import socket
 try:
-    from ConfigParser import ConfigParser
+    from configparser import ConfigParser
 except:
     from configparser import ConfigParser
 
